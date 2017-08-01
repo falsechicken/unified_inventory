@@ -10,16 +10,16 @@ unified_inventory.register_page("bags", {
 	get_formspec = function(player)
 		local player_name = player:get_player_name()
 		local formspec = "background[0.06,0.99;7.92,7.52;ui_bags_main_form.png]"
-		formspec = formspec.."label[0,0;"..F("Bags").."]"
+		formspec = formspec.."label[0,0;"..F("Bag").."]"
 		formspec = formspec.."button[0,2;2,0.5;bag1;"..F("Bag 1").."]"
-		formspec = formspec.."button[2,2;2,0.5;bag2;"..F("Bag 2").."]"
-		formspec = formspec.."button[4,2;2,0.5;bag3;"..F("Bag 3").."]"
-		formspec = formspec.."button[6,2;2,0.5;bag4;"..F("Bag 4").."]"
+		--formspec = formspec.."button[2,2;2,0.5;bag2;"..F("Bag 2").."]"
+		--formspec = formspec.."button[4,2;2,0.5;bag3;"..F("Bag 3").."]"
+		--formspec = formspec.."button[6,2;2,0.5;bag4;"..F("Bag 4").."]"
 		formspec = formspec.."listcolors[#00000000;#00000000]"
 		formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag1;0.5,1;1,1;]"
-		formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag2;2.5,1;1,1;]"
-		formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag3;4.5,1;1,1;]"
-		formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag4;6.5,1;1,1;]"
+		--formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag2;2.5,1;1,1;]"
+		--formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag3;4.5,1;1,1;]"
+		--formspec = formspec.."list[detached:"..minetest.formspec_escape(player_name).."_bags;bag4;6.5,1;1,1;]"
 		return {formspec=formspec}
 	end,
 })
@@ -27,7 +27,7 @@ unified_inventory.register_page("bags", {
 unified_inventory.register_button("bags", {
 	type = "image",
 	image = "ui_bags_icon.png",
-	tooltip = S("Bags"),
+	tooltip = S("Bag"),
 	hide_lite=true
 })
 
